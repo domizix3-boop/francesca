@@ -154,8 +154,6 @@
   position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 10px;
   padding: 12%; text-align: center; color: var(--piedra);
   background:
-    radial-gradient(circle at 18% 20%, rgba(255, 249, 241, .75) 0 8%, transparent 8.5%),
-    radial-gradient(circle at 84% 78%, rgba(207, 59, 55, .06) 0 14%, transparent 14.5%),
     radial-gradient(120% 90% at 20% 0%, var(--rosa) 0%, transparent 62%),
     linear-gradient(160deg, var(--rosa) 0%, var(--arena) 100%);
 }

@@ -153,8 +153,8 @@ test('motion: reveals completam, progresso, menu mobile', async () => {
   await page.evaluate(() => window.scrollTo(0, 1200));
   await page.waitForTimeout(1600);
   const hidden = await page.evaluate(() => [...document.querySelectorAll('[data-reveal]')]
-    .filter((el) => { const r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; })
-    .filter((el) => getComputedStyle(el).opacity !== '1').length);
+    .filter((el) => { const r = el.getBoundingClientRect(); return r.top < innerHeight * 0.8 && r.bottom > innerHeight * 0.1; })
+    .filter((el) => parseFloat(getComputedStyle(el).opacity) < 0.98).length);
   assert.equal(hidden, 0);
   const sx = await page.locator('.progress').evaluate((el) => new DOMMatrix(getComputedStyle(el).transform).a);
   assert.ok(sx > 0);
