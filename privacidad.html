@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad | Francesca Estética</title>
+  <meta name="description" content="Política de privacidad de Francesca Estética.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FBF0E2">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/legal.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bow" viewBox="0 0 60 30"><polygon points="28,15 4,3 4,27" fill="currentColor"/><polygon points="32,15 56,3 56,27" fill="currentColor"/><rect x="25" y="9" width="10" height="12" rx="2" fill="currentColor"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <header class="legal-nav">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Francesca Estética, inicio">
+        <span class="logo__text"><span class="logo__script">francesca</span><span class="logo__caps">ESTÉTICA</span></span>
+        <svg class="logo__bow" viewBox="0 0 60 30" aria-hidden="true"><use href="#bow"/></svg>
+      </a>
+      <a class="btn btn--light" href="index.html"><span>Volver a la web</span></a>
+    </div>
+  </header>
+  <main id="main" class="legal">
+    <div class="wrap">
+      <h1>Política de privacidad</h1>
+      <p class="legal__updated">Última actualización: 14 de noviembre de 2026</p>
+
+      <!-- TODO(cliente): completar los datos marcados y revisar con asesoría legal. -->
+      <h2>Responsable del tratamiento</h2>
+      <ul>
+        <li>Responsable: <span class="todo">[Razón social o nombre y apellidos]</span>, NIF <span class="todo">[NIF]</span></li>
+        <li>Dirección: Edificio Geminis Center, Av. de les Corts Valencianes, 39, Planta 1, 46015 València (Valencia)</li>
+        <li>Contacto: <span class="todo">[correo]</span> · +34 633 10 70 00</li>
+      </ul>
+      <h2>Qué datos tratamos y para qué</h2>
+      <p>Cuando nos escribes por WhatsApp tratamos los datos que nos facilitas (nombre, teléfono y el contenido de tus mensajes) para responder a tu consulta y gestionar tu cita. Si acudes a la clínica, los datos relacionados con tu tratamiento se tratarán conforme a la normativa sanitaria aplicable.</p>
+      <h2>Base legal</h2>
+      <p>La base legal es tu consentimiento al contactarnos y, en su caso, la ejecución de la relación de servicio que solicitas. Los datos de salud se tratan únicamente para prestar la asistencia y con las garantías previstas en el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+      <h2>Conservación</h2>
+      <p>Conservamos los datos el tiempo necesario para atender tu solicitud y, después, durante los plazos legalmente exigidos. <span class="todo">[revisar plazos]</span></p>
+      <h2>Destinatarios</h2>
+      <p>No cedemos tus datos a terceros salvo obligación legal. La comunicación por WhatsApp implica el uso de los servicios de WhatsApp Ireland Limited, que actúa conforme a su propia política de privacidad.</p>
+      <h2>Tus derechos</h2>
+      <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <span class="todo">[correo]</span>, indicando el derecho que quieres ejercer. Si consideras que no hemos atendido correctamente tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+      <p class="legal__back"><a class="btn btn--ghost" href="index.html"><span>Volver al inicio</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
+    </div>
+  </main>
+  <footer class="legal-foot">
+    <div class="wrap">
+      <p>© 2026 Francesca Estética</p>
+      <nav aria-label="Legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html" aria-current="page">Política de privacidad</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+  <script type="module">
+    import { initCookies, resetConsent } from './js/cookies.js';
+    document.querySelector('[data-reset-cookies]')?.addEventListener('click', () => { resetConsent(); location.reload(); });
+    initCookies();
+  </script>
+</body>
+</html>

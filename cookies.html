@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de cookies | Francesca Estética</title>
+  <meta name="description" content="Política de cookies de Francesca Estética.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FBF0E2">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/legal.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bow" viewBox="0 0 60 30"><polygon points="28,15 4,3 4,27" fill="currentColor"/><polygon points="32,15 56,3 56,27" fill="currentColor"/><rect x="25" y="9" width="10" height="12" rx="2" fill="currentColor"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <header class="legal-nav">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Francesca Estética, inicio">
+        <span class="logo__text"><span class="logo__script">francesca</span><span class="logo__caps">ESTÉTICA</span></span>
+        <svg class="logo__bow" viewBox="0 0 60 30" aria-hidden="true"><use href="#bow"/></svg>
+      </a>
+      <a class="btn btn--light" href="index.html"><span>Volver a la web</span></a>
+    </div>
+  </header>
+  <main id="main" class="legal">
+    <div class="wrap">
+      <h1>Política de cookies</h1>
+      <p class="legal__updated">Última actualización: 14 de noviembre de 2026</p>
+
+      <h2>Qué son las cookies</h2>
+      <p>Las cookies y tecnologías similares (como el almacenamiento local del navegador) guardan pequeñas cantidades de información en tu dispositivo cuando visitas una web.</p>
+      <h2>Qué usamos en esta web</h2>
+      <ul>
+        <li><strong>Técnicas (necesarias):</strong> <code>fr-consent</code> (almacenamiento local) guarda tu elección sobre cookies; <code>fr-intro</code> (almacenamiento de sesión) evita repetir la animación de bienvenida. No requieren consentimiento.</li>
+        <li><strong>Análisis (opcionales):</strong> actualmente no se cargan. Si en el futuro se añaden, solo se activarán si aceptas en el aviso de cookies. <span class="todo">[actualizar si se instala analítica]</span></li>
+      </ul>
+      <h2>Enlaces a terceros</h2>
+      <p>Los enlaces a WhatsApp, Instagram o Google Maps te llevan a servicios de terceros que aplican sus propias políticas de cookies.</p>
+      <h2>Cómo cambiar tu elección</h2>
+      <p>Puedes revisar tu elección en cualquier momento:</p>
+      <p><button class="btn btn--ghost" type="button" data-reset-cookies><span>Cambiar preferencias de cookies</span></button></p>
+      <p>También puedes borrar o bloquear las cookies desde la configuración de tu navegador.</p>
+      <p class="legal__back"><a class="btn btn--ghost" href="index.html"><span>Volver al inicio</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
+    </div>
+  </main>
+  <footer class="legal-foot">
+    <div class="wrap">
+      <p>© 2026 Francesca Estética</p>
+      <nav aria-label="Legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="cookies.html" aria-current="page">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+  <script type="module">
+    import { initCookies, resetConsent } from './js/cookies.js';
+    document.querySelector('[data-reset-cookies]')?.addEventListener('click', () => { resetConsent(); location.reload(); });
+    initCookies();
+  </script>
+</body>
+</html>

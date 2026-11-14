@@ -1,0 +1,64 @@
+/* Francesca Estética: tokens de design (fonte de verdade das cores, tipos e ritmo) */
+
+@font-face { font-family: "Allura"; src: url("../assets/fonts/allura-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("../assets/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("../assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("../assets/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("../assets/fonts/jost-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("../assets/fonts/jost-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+
+:root {
+  /* Cores da marca */
+  --crema:   #FBF0E2;
+  --tinta:   #181513;
+  --arena:   #EEDFC9;
+  --rosa:    #EFCFC4;
+  --granate: #A5242A;
+  --granate-d: #8C1D22;
+  --lazo:    #CF3B37;
+  --piedra:  #6A5F57;
+  --linea:   #E3D3BC;
+  --blanco:  #FFF9F1;
+
+  /* Tipos */
+  --f-script: "Allura", cursive;
+  --f-serif:  "Cormorant Garamond", "Times New Roman", serif;
+  --f-sans:   "Jost", system-ui, sans-serif;
+
+  --t-hero:  clamp(56px, 9vw, 128px);
+  --t-h2:    clamp(38px, 5vw, 64px);
+  --t-h3:    clamp(22px, 2vw, 26px);
+  --t-lead:  clamp(18px, 1.6vw, 21px);
+  --t-body:  clamp(16px, 1.1vw, 17px);
+  --t-small: 14px;
+  --t-kicker: 12px;
+
+  /* Ritmo */
+  --s-1: 8px; --s-2: 16px; --s-3: 24px; --s-4: 32px; --s-5: 48px; --s-6: 64px; --s-7: 96px;
+  --section-y: clamp(72px, 10vw, 128px);
+  --container: 1200px;
+  --gutter: clamp(16px, 4vw, 40px);
+
+  /* Forma */
+  --r-card: 28px;
+  --r-pill: 999px;
+  --shadow: 0 1px 2px rgba(24, 21, 19, .04), 0 12px 32px -12px rgba(24, 21, 19, .12);
+  --shadow-lift: 0 2px 4px rgba(24, 21, 19, .05), 0 22px 44px -18px rgba(24, 21, 19, .18);
+
+  /* Vidro (só cartão do hero e navbar rolada) */
+  --glass-bg: rgba(251, 240, 226, .55);
+  --glass-border: 1px solid rgba(255, 255, 255, .6);
+  --glass-blur: blur(20px) saturate(1.2);
+
+  /* Movimento */
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-io: cubic-bezier(.77, 0, .175, 1);
+  --d-fast: 160ms;
+  --d-ui: 240ms;
+  --d-enter: 800ms;
+}
+
+@media (max-width: 767px) {
+  :root { --r-card: 22px; }
+}

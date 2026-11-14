@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO(cliente): dominio real
+Sitemap: https://www.francescaestetica.es/sitemap.xml

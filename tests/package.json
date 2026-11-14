@@ -1,0 +1,7 @@
+{
+  "name": "francesca-tests",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test --test-concurrency=1 site.test.mjs" },
+  "devDependencies": { "playwright-core": "1.48.2" }
+}

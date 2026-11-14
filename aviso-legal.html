@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aviso legal | Francesca Estética</title>
+  <meta name="description" content="Aviso legal de Francesca Estética, clínica de estética en València.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FBF0E2">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/legal.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bow" viewBox="0 0 60 30"><polygon points="28,15 4,3 4,27" fill="currentColor"/><polygon points="32,15 56,3 56,27" fill="currentColor"/><rect x="25" y="9" width="10" height="12" rx="2" fill="currentColor"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <header class="legal-nav">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Francesca Estética, inicio">
+        <span class="logo__text"><span class="logo__script">francesca</span><span class="logo__caps">ESTÉTICA</span></span>
+        <svg class="logo__bow" viewBox="0 0 60 30" aria-hidden="true"><use href="#bow"/></svg>
+      </a>
+      <a class="btn btn--light" href="index.html"><span>Volver a la web</span></a>
+    </div>
+  </header>
+  <main id="main" class="legal">
+    <div class="wrap">
+      <h1>Aviso legal</h1>
+      <p class="legal__updated">Última actualización: 14 de noviembre de 2026</p>
+
+      <!-- TODO(cliente): completar los datos marcados y revisar con asesoría legal. -->
+      <h2>Datos identificativos</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos del titular de este sitio web:</p>
+      <ul>
+        <li>Titular: <span class="todo">[Razón social o nombre y apellidos]</span></li>
+        <li>NIF/CIF: <span class="todo">[NIF]</span></li>
+        <li>Nombre comercial: Francesca Estética</li>
+        <li>Domicilio: Edificio Geminis Center, Av. de les Corts Valencianes, 39, Planta 1, 46015 València (Valencia)</li>
+        <li>Teléfono / WhatsApp: +34 633 10 70 00</li>
+        <li>Correo electrónico: <span class="todo">[correo]</span></li>
+        <li>Datos registrales y autorización sanitaria, si procede: <span class="todo">[completar]</span></li>
+      </ul>
+      <h2>Objeto</h2>
+      <p>Este sitio web ofrece información sobre los tratamientos de estética y medicina estética de Francesca Estética y permite contactar por WhatsApp para solicitar cita. La información publicada es orientativa y no sustituye una valoración profesional personalizada.</p>
+      <h2>Condiciones de uso</h2>
+      <p>El acceso a este sitio web es gratuito y atribuye la condición de persona usuaria, que se compromete a hacer un uso adecuado de sus contenidos y a no emplearlos para actividades ilícitas o contrarias a la buena fe.</p>
+      <h2>Propiedad intelectual e industrial</h2>
+      <p>Los textos, la marca, el logotipo y el diseño de este sitio pertenecen a su titular o cuentan con la debida autorización. Queda prohibida su reproducción o distribución sin permiso expreso.</p>
+      <h2>Responsabilidad</h2>
+      <p>El titular no se hace responsable de los daños derivados de un uso indebido del sitio ni de la información de sitios web de terceros a los que se pueda acceder mediante enlaces.</p>
+      <h2>Legislación aplicable</h2>
+      <p>Las presentes condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a la normativa vigente.</p>
+      <p class="legal__back"><a class="btn btn--ghost" href="index.html"><span>Volver al inicio</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
+    </div>
+  </main>
+  <footer class="legal-foot">
+    <div class="wrap">
+      <p>© 2026 Francesca Estética</p>
+      <nav aria-label="Legal">
+        <a href="aviso-legal.html" aria-current="page">Aviso legal</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+  <script type="module">
+    import { initCookies, resetConsent } from './js/cookies.js';
+    document.querySelector('[data-reset-cookies]')?.addEventListener('click', () => { resetConsent(); location.reload(); });
+    initCookies();
+  </script>
+</body>
+</html>
