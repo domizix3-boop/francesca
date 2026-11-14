@@ -1,50 +1,60 @@
-# Francesca Estética: sitio web
+# Francesca Estética: site
 
-Web de una página (+ páginas legales) en HTML, CSS y JS puro. Sin build y sin dependencias en producción.
+Site de uma página (mais as páginas legais) em HTML, CSS e JS puro. Sem build e sem dependências em produção.
 
-## Cómo verlo en local
-Los módulos JS necesitan servirse por http (no abras el archivo con doble clic):
+## Como ver localmente
+Os módulos JS precisam ser servidos por http (abrir o arquivo com dois cliques não funciona):
 
 ```bash
 cd francesca
-npx serve .          # o: python3 -m http.server 8080
+npx serve .          # ou: python3 -m http.server 8080
 ```
 
-## Dónde se edita cada cosa
-| Qué | Dónde |
+## Onde editar cada coisa
+| O quê | Onde |
 |---|---|
-| WhatsApp, dirección, correo, Instagram, Maps, horario, PDF de la carta, dominio | `js/data.js` → `SITE` |
-| Servicios de la carta (nombre, descripción, mensaje de WhatsApp) | `js/data.js` → `SERVICES` |
-| Franja animada / 3 tratamientos destacados | `js/data.js` → `MARQUEE`, `FEATURED` |
-| Reseñas (activar con `showReviews: true`) | `js/data.js` → `REVIEWS` |
-| Pasos de «Cómo reservar» | `js/data.js` → `STEPS` |
-| Textos del hero, La clínica, pie | `index.html` |
-| Colores, tipografías, radios | `css/tokens.css` |
-| Textos legales (completar los campos en rojo) | `aviso-legal.html`, `privacidad.html`, `cookies.html` |
+| WhatsApp, endereço, e-mail, Instagram, Maps, horário, PDF da carta, domínio | `js/data.js` → `SITE` |
+| Serviços da carta (nome, descrição, mensagem do WhatsApp) | `js/data.js` → `SERVICES` |
+| Faixa animada / 3 tratamentos em destaque | `js/data.js` → `MARQUEE`, `FEATURED` |
+| Reseñas (ativar com `showReviews: true`) | `js/data.js` → `REVIEWS` |
+| Passos de "Cómo reservar" | `js/data.js` → `STEPS` |
+| Textos do hero, La clínica e rodapé | `index.html` |
+| Cores, fontes e raios | `css/tokens.css` |
+| Textos legais (completar os campos em vermelho) | `aviso-legal.html`, `privacidad.html`, `cookies.html` |
 
-Busca `TODO(cliente)` en el proyecto para ver todo lo pendiente.
+Procure `TODO(cliente)` no projeto para ver tudo o que está pendente.
 
-Vista previa de la sección de opiniones (sin reseñas reales): `index.html?preview=opiniones`.
+Prévia da seção de opiniões (sem reseñas reais): `index.html?preview=opiniones`.
 
-## Cómo poner las fotos
-Guarda cada foto **con el nombre exacto** en `assets/images/`. El sitio la detecta sola y quita el marcador «IMAGEN AQUÍ». No hace falta tocar código.
+## Como colocar as fotos
+Salve cada foto **com o nome exato** em `assets/images/`. O site detecta sozinho e tira o placeholder "IMAGEN AQUÍ", sem precisar mexer no código.
 
-| Id del marcador | Archivo | Tamaño recomendado | Forma |
+| Id do placeholder | Arquivo | Tamanho recomendado | Formato |
 |---|---|---|---|
 | `#ph-hero` | `assets/images/hero.jpg` | 1200 × 1200 | círculo (hero) |
-| `#ph-trat-micropigmentacion` | `assets/images/tratamiento-micropigmentacion.jpg` | 1200 × 1000 | tarjeta |
-| `#ph-trat-mesoterapia` | `assets/images/tratamiento-mesoterapia.jpg` | 1200 × 1000 | tarjeta |
-| `#ph-trat-hialuronico` | `assets/images/tratamiento-hialuronico.jpg` | 1200 × 1000 | tarjeta |
+| `#ph-trat-micropigmentacion` | `assets/images/tratamiento-micropigmentacion.jpg` | 1200 × 1000 | card |
+| `#ph-trat-mesoterapia` | `assets/images/tratamiento-mesoterapia.jpg` | 1200 × 1000 | card |
+| `#ph-trat-hialuronico` | `assets/images/tratamiento-hialuronico.jpg` | 1200 × 1000 | card |
 | `#ph-clinica` | `assets/images/clinica.jpg` | 1200 × 1500 | arco vertical |
-| (compartir en redes) | `assets/og.jpg` | 1200 × 630 | imagen para WhatsApp/Facebook |
+| (compartilhamento) | `assets/og.jpg` | 1200 × 630 | prévia no WhatsApp/Facebook |
 
-Consejos: JPG de calidad 80 o WebP (si usas WebP, cambia la extensión en `PLACEHOLDERS`), menos de 300 KB cada una, con la misma temperatura de color cálida. Sin fotos de antes y después.
+Dicas:
+- Use JPG com qualidade 80 ou WebP. Se usar WebP, troque a extensão em `PLACEHOLDERS`.
+- Mantenha cada foto abaixo de 300 KB.
+- Use fotos com a mesma temperatura de cor quente.
+- Não use fotos de antes e depois.
 
 ## Publicar
-Es un sitio estático: arrastra la carpeta (sin `tests/` ni `docs/`) a Netlify Drop o a Cloudflare Pages, o súbela a cualquier hosting. Antes de publicar, cambia el dominio en `index.html` (canonical, og:url, og:image, JSON-LD), `sitemap.xml`, `robots.txt` y `SITE.domain`.
+É um site estático: arraste a pasta (sem `tests/` e `docs/`) para o Netlify Drop ou o Cloudflare Pages, ou envie para qualquer hospedagem.
 
-## Tests (desarrollo)
+Antes de publicar, troque o domínio provisório `francescaestetica.es` pelo real nestes lugares:
+- `index.html` (canonical, og:url, og:image e JSON-LD);
+- `sitemap.xml`;
+- `robots.txt`;
+- `SITE.domain`.
+
+## Testes (desenvolvimento)
 ```bash
-cd tests && npm install && npm test     # 20 pruebas en Chromium headless
-node shoot.mjs                           # capturas en tests/shots/
+cd tests && npm install && npm test     # 20 testes no Chromium headless
+node shoot.mjs                           # capturas em tests/shots/
 ```
